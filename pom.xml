@@ -11,5 +11,6 @@
         <module>api</module>
         <module>business</module>
         <module>kotlin</module>
+        <module>worker</module>
     </modules>
 </project>
