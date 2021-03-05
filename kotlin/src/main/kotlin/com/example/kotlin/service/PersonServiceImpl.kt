@@ -1,10 +1,8 @@
 package com.example.kotlin.service
 
 import com.example.kotlin.model.Person
-import com.example.kotlin.service.exception.NotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import java.util.*
 
 @Service
 class PersonServiceImpl : PersonService {
