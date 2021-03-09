@@ -10,7 +10,7 @@
     <modules>
         <module>api</module>
         <module>business</module>
-        <module>kotlin</module>
+        <module>person</module>
         <module>worker</module>
     </modules>
 </project>

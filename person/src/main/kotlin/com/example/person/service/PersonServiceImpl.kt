@@ -1,6 +1,6 @@
-package com.example.kotlin.service
+package com.example.person.service
 
-import com.example.kotlin.model.Person
+import com.example.person.model.Person
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
@@ -20,5 +20,9 @@ class PersonServiceImpl : PersonService {
         val foundPerson = database.find { item -> item.id == id }
         LOGGER.info("Found person: $foundPerson")
         return foundPerson!!
+    }
+
+    override fun getAll(): List<Person> {
+        return database;
     }
 }

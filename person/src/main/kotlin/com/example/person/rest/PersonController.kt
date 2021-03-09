@@ -1,7 +1,7 @@
-package com.example.kotlin.rest
+package com.example.person.rest
 
-import com.example.kotlin.model.Person
-import com.example.kotlin.service.PersonService
+import com.example.person.model.Person
+import com.example.person.service.PersonService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
