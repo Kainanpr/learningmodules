@@ -1,6 +1,7 @@
 package com.example.person.service
 
 import com.example.person.model.Person
+import com.example.person.service.exception.PersonNotFoundException
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
@@ -19,10 +20,11 @@ class PersonServiceImpl : PersonService {
     override fun getPersonById(id: Int): Person {
         val foundPerson = database.find { item -> item.id == id }
         LOGGER.info("Found person: $foundPerson")
-        return foundPerson!!
+        return foundPerson ?: throw PersonNotFoundException()
     }
 
     override fun getAll(): List<Person> {
+        LOGGER.info("Get all: $database")
         return database;
     }
 }
